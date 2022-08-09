@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 const typeIs = require("type-is");
+const multer = require("multer");
+const upload = multer();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -15,6 +17,19 @@ app.get("/otherindex", (req, res) => {
 });
 
 app.post("/handler", async (req, res) => {
+  try {
+    console.log(
+      typeIs(req, ["html", "json", "*/*", "application/*", "text/*"])
+    );
+    console.log(req.body);
+    res.json({ response: "success" });
+  } catch (error) {
+    console.log(error);
+    res.json("error");
+  }
+});
+
+app.post("/otherHandler", upload.none(), async (req, res) => {
   try {
     console.log(
       typeIs(req, ["html", "json", "*/*", "application/*", "text/*"])

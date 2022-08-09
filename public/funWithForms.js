@@ -22,7 +22,8 @@ async function submitData() {
     });
     const data = await response.json();
     if (data.response === "success") {
-      alert("Message received!");
+      document.querySelector(".first-form-message").innerText =
+        "Message received!";
       document.getElementById("first-form").reset();
     }
   } catch (error) {
@@ -30,24 +31,21 @@ async function submitData() {
   }
 }
 
-// Form 2 - promise chaining
+// Form 2 - promise chaining  (Note that Express cannot parse the FormData object, not even with express.urlencoded().  You must use a middleware like Multer)
 
 function sendData(event) {
   event.preventDefault();
-  console.log("Function firing");
   const data = new FormData(document.getElementById("second-form"));
-  const dataToSend = Array.from(data);
-  const reallyDataToSend = {};
-  dataToSend.forEach((a) => (reallyDataToSend[a[0]] = a[1]));
-  fetch("/handler", {
+  console.log(data.has("name"));
+  fetch("/otherHandler", {
     method: "POST",
-    headers: { "Content-Type": "multipart/form-data" },
     body: data,
   })
     .then((response) => response.json())
     .then((message) => {
       if (message.response === "success") {
-        alert("Message received!");
+        document.querySelector(".second-form-message").innerText =
+          "Message received!";
         document.getElementById("second-form").reset();
       } else alert("Failure!");
     })
