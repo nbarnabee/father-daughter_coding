@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Fun(?) With Forms</title>
+</head>
+
+<body>
+  <h2>Fun With Forms</h2>
+  <section class="fun-with-forms">
+    <form action="" method="" id="first-form">
+      <h3>Form with JavaScript</h3>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email">
+      <label for="success"></label>
+      <textarea name="message" id="message" cols="30" rows="5"></textarea>
+      <button type="button">Submit</button>
+    </form>
+
+    <h4 class="return-message"></h4>
+
+
+
+    <form id="second-form" action="/handler" method="post" enctype="multipart/form-data">
+      <h3>Another Form with JavaScript</h3>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="second-name">
+      <label for="email">Email</label>
+      <input type="text" name="email" id="second-email">
+      <label for="success"></label>
+      <textarea name="message" id="second-message" cols="30" rows="5"></textarea>
+      <button>Submit</button>
+    </form>
+  </section>
+
+  <section class="testing-timeout">
+    <h2>Testing Timeout</h2>
+    <button type="button" class="modal-control">Open modal</button>
+    <div class="modal">
+      <div class="inner-modal">
+        <h4>Set reminder</h4>
+        <label for="reminder">Remind me in
+          <input type="number" name="reminder" id="reminder">seconds</label>
+        <button type="button" class="set-reminder">Set reminder</button>
+        <button type="button" class="modal-control">Cancel</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="funWithForms.js"></script>
+  <script src="testingTimeout.js"></script>
+</body>
+
+
+
+</html>
