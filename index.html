@@ -43,18 +43,14 @@
       <div class="inner-modal">
         <h4>Set reminder</h4>
         <label for="reminder">Remind me in
-          <input type="number" name="reminder" id="reminder" min="10">seconds</label>
+          <input type="number" name="reminder" id="reminder" min="20" value="20">seconds</label>
         <button type="button" class="set-reminder">Set reminder</button>
         <button type="button" class="modal-control">Cancel</button>
       </div>
     </div>
-    <p class="text-box text-box1"> Natively, JS can only "do" one thing at a time. The neat thing about promises and
-      asynchronous programming is that it allows us to overcome that limitation. Other functions (like
-      the one
-      that's causing this text to be displayed) can continue to run while we wait for the timer function to resolve.</p>
-    <p class="text-box text-box2">This box's appearance was triggered by another asynchronous function. You could also
-      enter data into the forms and submit them while you wait. But without asynchronous programming, that wouldn't be
-      possible.</p>
+    <p class="text-box text-box1"></p>
+    <p class="text-box text-box2">Asynchronous functions don't have to be resolved in the order they were called,
+      either. This box's appearance was triggered by an asynchronous function that was called after the first.</p>
   </section>
 
   <script src="funWithForms.js"></script>
