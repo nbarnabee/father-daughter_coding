@@ -10,10 +10,11 @@
       var data = new FormData();
       data.append("name", document.getElementById("name").value);
       data.append("email", document.getElementById("email").value);
+      data.append("message", document.getElementById("message").value);
       console.log(...data);
 
       // (B) INIT FETCH POST
-      fetch("/handler", {
+      fetch("/otherHandler", {
         method: "POST",
         body: data
       })
