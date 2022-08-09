@@ -1,3 +1,5 @@
+/* -- General styles --*/
+
 h2 {
   text-align: center;
 }
@@ -14,8 +16,18 @@ section {
   display: flex;
   justify-content: center;
   gap: 10%;
-  margin-block: 3rem;
+  margin-block: 2rem;
 }
+
+/* -- Styles for "fun with forms" -- */
+
+form > h4 {
+  height: 18px;
+  color: green;
+  margin: 5px;
+}
+
+/* -- Styles for Testing Timeout --- */
 
 section.testing-timeout {
   flex-direction: column;
@@ -52,4 +64,15 @@ section.testing-timeout {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.text-box {
+  max-width: 60ch;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.text-box-awake {
+  opacity: 1;
+  transition: 0.3s;
 }

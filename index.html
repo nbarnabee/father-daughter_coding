@@ -10,7 +10,6 @@
 </head>
 
 <body>
-  <h2>Fun With Forms</h2>
   <section class="fun-with-forms">
     <form action="" method="" id="first-form">
       <h3>Form with JavaScript</h3>
@@ -18,39 +17,44 @@
       <input type="text" name="name" id="name">
       <label for="email">Email</label>
       <input type="email" name="email" id="email">
-      <label for="success"></label>
-      <textarea name="message" id="message" cols="30" rows="5"></textarea>
+      <label for="message">Message</label>
+      <textarea name="message" id="message" cols="30" rows="2"></textarea>
       <button type="button">Submit</button>
+      <h4 class="first-form-message"></h4>
     </form>
 
-    <h4 class="return-message"></h4>
-
-
-
-    <form id="second-form" action="/handler" method="post" enctype="multipart/form-data">
+    <form id="second-form" action="" method="" enctype="multipart/form-data">
       <h3>Another Form with JavaScript</h3>
       <label for="name">Name</label>
       <input type="text" name="name" id="second-name">
       <label for="email">Email</label>
       <input type="text" name="email" id="second-email">
-      <label for="success"></label>
-      <textarea name="message" id="second-message" cols="30" rows="5"></textarea>
+      <label for="second-message">Message</label>
+      <textarea name="message" id="second-message" cols="30" rows="2"></textarea>
       <button>Submit</button>
+      <h4 class="second-form-message"></h4>
     </form>
   </section>
 
   <section class="testing-timeout">
-    <h2>Testing Timeout</h2>
+    <h2>Asynchronous Functions</h2>
     <button type="button" class="modal-control">Open modal</button>
     <div class="modal">
       <div class="inner-modal">
         <h4>Set reminder</h4>
         <label for="reminder">Remind me in
-          <input type="number" name="reminder" id="reminder">seconds</label>
+          <input type="number" name="reminder" id="reminder" min="10">seconds</label>
         <button type="button" class="set-reminder">Set reminder</button>
         <button type="button" class="modal-control">Cancel</button>
       </div>
     </div>
+    <p class="text-box text-box1"> Natively, JS can only "do" one thing at a time. The neat thing about promises and
+      asynchronous programming is that it allows us to overcome that limitation. Other functions (like
+      the one
+      that's causing this text to be displayed) can continue to run while we wait for the timer function to resolve.</p>
+    <p class="text-box text-box2">This box's appearance was triggered by another asynchronous function. You could also
+      enter data into the forms and submit them while you wait. But without asynchronous programming, that wouldn't be
+      possible.</p>
   </section>
 
   <script src="funWithForms.js"></script>
